@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Post.it</title>
+	<link href="style.css" rel="stylesheet" type="text/css" />
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js">
+
+	</script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">
+
+	</script>
+	<script src="https://kit.fontawesome.com/a076d05399.js">
+
+	</script>
+	<script src="script.js">
+
+	</script>
+</head>
+
+<body>
+	<div class="container no-border">
+		<h1 class="title">Post.it</h1>
+		<p class="subtitle">Just post it!</p>
+    
+    <p class="subtittle">Made by <a href="https://replit.com/@PoggyPotato">PoggyPotato</a>
+	</div>
+	<div class="createPost scale hidden" id="modal">
+		<h3>Create A Post!</h3>
+		<input type="text" style="font-family: consolas" placeholder="Your Name" id="username"  required autocomplete="off">
+		<input type="text" style="font-family: consolas" placeholder="Post Title" id="title" required autocomplete="off">
+		<textarea type="text" placeholder="Post content"  id="content" rows="5" style="resize: vertical;max-height:440px; min-height:200px;"></textarea>
+		<button id="submit" >Create Post</button>
+	</div>
+	<hr>
+	<h2>Latest Post <span style="font-family: consolas; font-size:20px; "> (Reload if your post doesn't appear)</span></h2>
+  <center>
+    <button id="newPost" >Add a post +</button>
+  </center>
+	<div class="list">
+		<div class="container">
+			<div id="recent" class="post">
+				<h2 id="post-title">Loading post title...</h2>
+				<p id="post-user">Loading post's author...</p>
+				<hr>
+				<p id="post-content">Loading post's content</p>
+			</div>
+		</div>
+		<hr>
+		<h2>Posts posted while you were online</h2>
+		<div class="container" id="list">
+		</div>
+	</div>
+	
+</body>
+
+</html>
